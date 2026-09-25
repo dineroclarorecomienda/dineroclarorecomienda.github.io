@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Cómo funciona la aplicación de TikTok de Dinero Claro Recomienda: paso a paso, permisos que usa y qué datos toca y cuáles no.">
+<title>Cómo funciona la aplicación — Dinero Claro Recomienda</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="cabecera">
+  <div class="wrap">
+    <a class="marca" href="index.html"><span class="corazon">💛</span> Dinero Claro Recomienda</a>
+    <nav class="principal" aria-label="Navegación principal">
+      <a href="index.html">Inicio</a>
+      <a href="aplicacion.html" class="activo">La aplicación</a>
+      <a href="preguntas.html">Preguntas</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="privacidad.html">Privacidad</a>
+      <a href="terminos.html">Términos</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <h1 class="titulo-pagina">Cómo funciona la aplicación</h1>
+  <p class="subtitulo">Explicado paso a paso y sin tecnicismos innecesarios: qué hace nuestra aplicación de TikTok, qué permisos usa y qué datos toca (y cuáles no).</p>
+
+  <section>
+    <h2>¿Qué es esta aplicación?</h2>
+    <p>Es una <strong>herramienta interna</strong> del proyecto Dinero Claro Recomienda. No es una aplicación pública que cualquiera pueda descargar ni usa cuentas de terceros: existe únicamente para subir <strong>nuestros propios videos</strong> de recomendaciones a la bandeja de <strong>borradores</strong> de <strong>nuestra propia cuenta</strong> de TikTok, usando la API oficial de TikTok (Content Posting API).</p>
+    <p>Su único propósito es operativo: garantizar que el video del día llegue a los borradores a tiempo, todos los días, sin depender de subidas manuales que pueden fallar o retrasarse.</p>
+  </section>
+
+  <section>
+    <h2>Paso a paso</h2>
+    <ol class="pasos">
+      <li>
+        <strong>Vinculación única.</strong><br>
+        El creador vincula su cuenta de TikTok una sola vez, a través de la pantalla oficial de consentimiento de TikTok (OAuth). En esa pantalla se muestra claramente qué permiso se está solicitando. La aplicación nunca pide ni guarda la contraseña de TikTok.
+      </li>
+      <li>
+        <strong>Subida diaria a borradores.</strong><br>
+        Cada día, la aplicación toma el video de recomendación del día y lo sube como borrador (<code>FILE_UPLOAD</code>) a la cuenta vinculada. El video queda guardado en la bandeja de borradores, <strong>sin publicar</strong>.
+      </li>
+      <li>
+        <strong>Revisión y publicación manual.</strong><br>
+        El creador abre la aplicación de TikTok en su teléfono, revisa el borrador (video, descripción y portada) y decide si lo publica. <strong>Nada se publica automáticamente.</strong>
+      </li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Permisos que usa y por qué</h2>
+    <div class="tarjeta">
+      <p><strong>Login Kit</strong> — Sirve para vincular la cuenta de TikTok del creador de forma segura, mediante la pantalla oficial de TikTok. Así nadie más que TikTok ve las credenciales.</p>
+      <p><strong><code>video.upload</code></strong> — Sirve para subir los videos a la bandeja de borradores. Este permiso <strong>solo permite subir</strong>: no permite publicar videos, ni leer mensajes, ni ver la lista de seguidores, ni acceder a ningún otro dato de la cuenta.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Lo que la aplicación NO hace</h2>
+    <ul class="cross">
+      <li><strong>No publica videos por su cuenta.</strong> La publicación directa está desactivada por diseño.</li>
+      <li><strong>No lee mensajes directos</strong>, comentarios ni la lista de seguidores.</li>
+      <li><strong>No recoge</strong> nombres, correos ni datos personales de terceros.</li>
+      <li><strong>No comparte ni vende</strong> información con nadie.</li>
+      <li><strong>No muestra publicidad ni pide pagos.</strong> Es una herramienta interna y gratuita.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Cómo desvincular la aplicación</h2>
+    <p>El creador puede desvincular la aplicación en cualquier momento desde la aplicación de TikTok: <strong>Ajustes → Seguridad → Aplicaciones autorizadas</strong>. Al revocar el acceso, el token deja de funcionar de inmediato.</p>
+  </section>
+
+  <section>
+    <h2>Documentos relacionados</h2>
+    <p>Para el detalle legal, consulta los <a href="terminos.html">Términos de Servicio</a> y la <a href="privacidad.html">Política de Privacidad</a>. Si algo no queda claro, escríbenos: <a href="mailto:aldoalfonso1970@gmail.com">aldoalfonso1970@gmail.com</a>.</p>
+  </section>
+
+</main>
+
+<footer class="pie">
+  <div class="wrap">
+    <nav aria-label="Enlaces del pie">
+      <a href="index.html">Inicio</a>
+      <a href="aplicacion.html">La aplicación</a>
+      <a href="preguntas.html">Preguntas</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="privacidad.html">Privacidad</a>
+      <a href="terminos.html">Términos</a>
+    </nav>
+    <p>© 2026 Dinero Claro Recomienda · Contacto: <a href="mailto:aldoalfonso1970@gmail.com">aldoalfonso1970@gmail.com</a></p>
+  </div>
+</footer>
+
+</body>
+</html>
